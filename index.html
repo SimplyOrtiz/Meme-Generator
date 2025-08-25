@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <h1>Meme Generator</h1>
+    <input type="file" id="imageInput" accept="image/*">
+
+    <br>
+    <label for="font-select">Font Type</label>
+    <select name="font-type" id="fontSelect">
+        <option value="Impact" selected>Impact</option>
+        <option value="Comic Sans MS">Comic Sans</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Arial, Helvetica">Arial</option>
+    </select>
+    <br>
+
+    <div class="controls">
+        <label for="topText">Top Text</label>
+        <input type="text" id="topText" placeholder="Enter Top Text">
+
+        <label for="bottomText">Bottom Text</label>
+        <input type="text" id="bottomText" placeholder="Enter Bottom Text">
+        
+        <hr>
+
+        <label for="line-size">Line Size</label>
+        <input type="number" id="lineSize" min="0" max="5" value="2">
+        
+        <label for="color-picker2">Choose Line Color</label>
+        <input type="color" id="colorPicker2" value="#000000">
+
+        <hr>
+
+        <label for="color-picker">Choose Text Color</label>
+        <input type="color" id="colorPicker" value="#FFFFFF">
+
+        <hr>
+
+        <button id="generate" onclick="generateMeme()">Generate Meme</button>
+        <button id="download" onclick="downloadMeme()">Download Meme</button>
+    </div>
+    <canvas id="memeCanvas" width="580" height="450"></canvas>
+
+    <footer>
+        <p style="text-align: center;">
+            made by <a href="https://github.com/simplyOrtiz" target="_blank" rel="noopener noreferrer" class="simplyortiz">SimplyOrtiz</a> <br>
+            based on <a href="https://www.freecodecamp.org/news/create-meme-generator-using-html-canvas/" target="_blank" rel="noopener noreferrer" class="codecamp"">FreeCodecamp</a>
+        </p>
+    </footer>
+
+    <script src="/src/js/main.js"></script>
+</body>
+</html>
